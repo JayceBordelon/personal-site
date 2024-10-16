@@ -1,0 +1,26 @@
+@import url("../index.css");
+
+
+:root{
+    --nav-padding: 2rem;
+}
+
+nav {
+    padding: 0 var(--nav-padding) 0 var(--nav-padding);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a{
+    color: var(--text);
+}
