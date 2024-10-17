@@ -1,0 +1,18 @@
+#intro .profile-pic {
+    width: 20em;
+    border-radius: 5px;
+    background: linear-gradient(-45deg, var(--alt), var(--text), var(--alt));
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 80%;
+}
+
+.profile-pic:hover {
+    box-shadow: 0 4px 6px var(--alt), 0 1px 3px var(--alt);
+    cursor: pointer;
+    transform: scale(1.05); 
+}
+
+.profile-pic img {
+    max-width: 100%;
+}

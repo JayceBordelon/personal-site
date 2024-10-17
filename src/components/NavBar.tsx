@@ -4,6 +4,7 @@ import { TfiWrite } from "react-icons/tfi"; //Blog
 import "../styles/nav.css"
 import { useEffect, useState } from "react";
 import { getContactIcon, getEducationIcon, getIntroIcon, getProjectIcon, getSkillIcon, getWorkIcon } from "../constants/sectionIcons";
+import { openLinkInNewTab } from "../functions/helpers";
 
 
 
@@ -13,13 +14,6 @@ export default function NavBar() {
     const [hasAnimated, setHasAnimated] = useState(false);
     const [expand, setExpand] = useState(false);
 
-    const openResume = () => {
-        window.open("JayceBordelonResume.pdf");
-    }
-
-    const openBlog = () => {
-        window.open("https://jayceblog.netlify.app");
-    }
     useEffect(()=> {
         setTimeout(() => {
             setHasAnimated(true);
@@ -38,8 +32,8 @@ export default function NavBar() {
     return (
         <header id="nav-container">
             <nav>
-                <FaCloudDownloadAlt className="download-resume animate-nav-icon" size={navIconSize} onClick={openResume} />
-                <TfiWrite size={navIconSize} className="to-blog animate-nav-icon"  onClick={openBlog}/>
+                <FaCloudDownloadAlt className="download-resume animate-nav-icon" size={navIconSize} onClick={() => openLinkInNewTab("JayceBordelonResume.pdf")} />
+                <TfiWrite size={navIconSize} className="to-blog animate-nav-icon"  onClick={() => openLinkInNewTab("https://jayceblog.netlify.app")}/>
                 <SiCoffeescript className={getCoffeeClass()} size={navIconSize} onClick={() => setExpand(!expand)} />
                 <div className={expand ? "nav-links-show" : "nav-links-hide"}>
                     <a onClick={() => setExpand(!expand)} className="nav-link" href="#intro">{getIntroIcon(expandedIconSize)}&nbsp;Intro</a>

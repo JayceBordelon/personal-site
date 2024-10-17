@@ -1,5 +1,6 @@
 @import url("./styles/animations.css");
 @import url("./styles/nav.css");
+@import url("./styles/intro.css");
 
 
 :root {
@@ -16,6 +17,7 @@
   --box: 0 4px 6px rgba(0, 0, 0, 0.1), 
                 0 1px 3px rgba(0, 0, 0, 0.08);
   --alt: #4b6b8b;
+  --section-title-size: 3em;
 }
 
 html {
@@ -43,7 +45,7 @@ html{
 
 section {
   padding-top: var(--nav-height);
-  animation: fadeIn 3s ease-in-out forwards;
+  min-height: 1000px;
 }
 
 
@@ -55,10 +57,19 @@ section header{
 }
 
 section header h2 {
-  font-size: 2em;
+  font-size: var(--section-title-size);
   width: fit-content;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   align-items: center;
+}
+
+.section-content{
+  display: flex;
+  justify-content: center;
+}
+
+main{
+  margin-top: var(--nav-height);
 }
