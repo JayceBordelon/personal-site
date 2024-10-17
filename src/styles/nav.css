@@ -1,26 +1,102 @@
-@import url("../index.css");
-
 
 :root{
     --nav-padding: 2rem;
+    --nav-height: 4rem;
+    --nav-link-size: 1.5em;
+    --nav-animation-duration: 1s;
+}
+#nav-container{
+    width: 100%;
+    height: var(--nav-height);
+    position: fixed;
+    display: flex;
+    background-color: var(--alt);
+    color: var(--text);
+    align-items: center;
+    top: 0;
+    left: 0;
 }
 
 nav {
-    padding: 0 var(--nav-padding) 0 var(--nav-padding);
-}
-
-nav ul {
+    position: relative;
     display: flex;
     list-style-type: none;
     justify-content: space-between;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: var(--nav-height);
+    padding: var(--nav-padding);
 }
 
-.nav-links a{
+.nav-links-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: calc(var(--nav-height) + var(--nav-padding));
+    right: 0;
+    justify-content: space-around;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-size: var(--nav-link-size);
+    background-color: var(--alt);
+    animation: expandHeight var(--nav-animation-duration) ease-in-out forwards;
+}
+
+@keyframes expandHeight{
+    0% {
+        height: 0;
+    }
+    100% {
+        height: calc(100vh - var(--nav-height));
+    }
+}
+
+.coffee-active{
+    color: var(--bg);
+}
+
+.nav-link{
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: appear var(--nav-animation-duration) ease-in-out forwards;
+}
+
+.nav-link:hover{
+    box-shadow: var(--box);
+    background-color: var(--bg);
+    color: var(--text)
+}
+
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.nav-links-hide{
+    display: none;
+}
+
+.nav-links-show a{
     color: var(--text);
+    text-decoration: none;
+}
+
+.download-resume:hover, .coffee:hover, .coffee-active:hover{
+    cursor: pointer;
 }

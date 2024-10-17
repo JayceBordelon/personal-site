@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar"
+import Intro from "./sections/Intro"
 
 function App() {
 
@@ -6,6 +7,7 @@ function App() {
     <>
     <NavBar />
     <main>
+      <Intro />
     </main>
   
     </>
