@@ -1,72 +1,48 @@
 import { useState, useEffect } from 'react';
 
 interface RandomizedTitleProps {
-    title: string;
+    children: React.ReactNode;
 }
 
-export default function RandomizedTitle({ title }: RandomizedTitleProps) {
+export default function RandomizedTitle({ children }: RandomizedTitleProps) {
     const [genTitle, setGenTitle] = useState<string>('');
     const [seed, setSeed] = useState<number>(0);
-    const [changingChar, setChangingChar] = useState<string>('');
-    const [remainingString, setRemainingString] = useState<string>('');
     const [finished, setFinished] = useState<boolean>(false);
 
-    const generateRandomString = (length: number): string => {
-        const characters = '!@#$%^&*(){}[]:".<>/?~,';
+    const title = typeof children === 'string' ? children : '';
+
+    const generateSpaces = (length: number): string => {
         let result = '';
         for (let i = 0; i < length; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            result += characters[randomIndex];
+            result += ' ';
         }
         return result;
     };
 
-    const staticRandomPart = generateRandomString(title.length);
-
     useEffect(() => {
-
-        setRemainingString(staticRandomPart.substring(seed - 1));
         const interval = setInterval(() => {
-            if (seed > title.length) {
+            if (seed >= title.length) {
                 clearInterval(interval);
                 setFinished(true);
             } else {
-                const randomChar = generateRandomString(1);
-                setChangingChar(randomChar == undefined ? "" : randomChar);
-            }
-        }, 35);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        const correctInterval = setInterval(() => {
-            if (seed <= title.length) {
-                setGenTitle((prev) => {
-                    if (prev.length == title.length) {
-                        clearInterval(correctInterval);
-                        setFinished(true);
-                        return title;
-                    } else {
-                        return prev + title[seed];
-                    }
-                });
+                const nextChar = title[seed];
+                setGenTitle((prev) => prev + nextChar);
                 setSeed((prevSeed) => prevSeed + 1);
             }
-        }, 35);
-        return () => clearInterval(correctInterval);
+        }, 25);
+
+        return () => clearInterval(interval);
     }, [seed, title]);
 
     return (
         <>
-
             {!finished ? (
                 <>
-                    {genTitle}
-                    {changingChar}
-                    {remainingString.slice(seed)}
+                    {genTitle} {generateSpaces(title.length - seed - 1)}|
                 </>
-            ) : title}
+            ) : (
+                children
+            )}
         </>
     );
 }

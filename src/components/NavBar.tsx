@@ -1,5 +1,6 @@
 import { FaCloudDownloadAlt } from "react-icons/fa";
-import { SiCoffeescript } from "react-icons/si";
+import { CiMenuBurger } from "react-icons/ci";
+import { AiOutlineClose } from "react-icons/ai";
 import { TfiWrite } from "react-icons/tfi"; //Blog
 import "../styles/nav.css"
 import { useEffect, useState } from "react";
@@ -14,15 +15,15 @@ export default function NavBar() {
     const [hasAnimated, setHasAnimated] = useState(false);
     const [expand, setExpand] = useState(false);
 
-    useEffect(()=> {
+    useEffect(() => {
         setTimeout(() => {
             setHasAnimated(true);
-          }, 2000);
+        }, 2000);
     }, []);
 
     const getCoffeeClass = () => {
         let current = expand ? "coffee-active" : "coffee";
-        if (!hasAnimated){
+        if (!hasAnimated) {
             console.log(current + " animate-nav-icon");
             return current + " animate-nav-icon"
         }
@@ -33,8 +34,9 @@ export default function NavBar() {
         <header id="nav-container">
             <nav>
                 <FaCloudDownloadAlt className="download-resume animate-nav-icon" size={navIconSize} onClick={() => openLinkInNewTab("JayceBordelonResume.pdf")} />
-                <TfiWrite size={navIconSize} className="to-blog animate-nav-icon"  onClick={() => openLinkInNewTab("https://jayceblog.netlify.app")}/>
-                <SiCoffeescript className={getCoffeeClass()} size={navIconSize} onClick={() => setExpand(!expand)} />
+                <TfiWrite size={navIconSize} className="to-blog animate-nav-icon" onClick={() => openLinkInNewTab("https://jayceblog.netlify.app")} />
+                {!expand ? <CiMenuBurger className={getCoffeeClass()} size={navIconSize} onClick={() => setExpand(!expand)} />
+                    : <AiOutlineClose className={getCoffeeClass()} size={navIconSize} onClick={() => setExpand(!expand)} />}
                 <div className={expand ? "nav-links-show" : "nav-links-hide"}>
                     <a onClick={() => setExpand(!expand)} className="nav-link" href="#intro">{getIntroIcon(expandedIconSize)}&nbsp;Intro</a>
                     <a onClick={() => setExpand(!expand)} className="nav-link" href="#education">{getEducationIcon(expandedIconSize)}&nbsp;Education</a>

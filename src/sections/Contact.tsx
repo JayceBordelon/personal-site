@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section id="contact">
       <header>
-          <h2><RandomizedTitle title="Contact" /></h2>
+          <h2><RandomizedTitle>Get In Touch</RandomizedTitle></h2>
       </header>
     </section>
   )

@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <header>
-      <h2><RandomizedTitle title="Projects" /></h2>
+      <h2><RandomizedTitle>Projects</RandomizedTitle></h2>
       </header>
     </section>
   )

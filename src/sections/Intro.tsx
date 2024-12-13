@@ -11,7 +11,7 @@ export default function () {
             </div>
             <header>
                 <h2>
-                    <RandomizedTitle title="Learning to Build Valuable Software" />
+                    <RandomizedTitle>Learning to Build Valuable Software</RandomizedTitle>
                 </h2>
 
             </header>
