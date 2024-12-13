@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section id="skills">
         <header>
-        <h2><RandomizedTitle>Experience in Applicable Technology</RandomizedTitle></h2>
+        <h2><RandomizedTitle>Top Skills</RandomizedTitle></h2>
       </header>
     </section>
   )

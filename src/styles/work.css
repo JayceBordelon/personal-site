@@ -1,0 +1,153 @@
+#work-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.work-card {
+    color: var(--text);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    min-height: 750px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+}
+
+.work-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.work-card-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 5%;
+    object-fit: cover;
+    box-shadow: var(--box);
+}
+
+.work-card-header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-card-company {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.work-card-position {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--alt);
+}
+
+.work-card-dates {
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.work-card-description {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.desc-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.work-icon {
+    color: var(--alt);
+    width: 20%;
+}
+
+.work-card-description li {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    width: 80%;
+}
+
+.work-card-skills {
+    margin-top: 1rem;
+}
+
+.work-card-skills-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.work-card-skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.work-card-skills li {
+    background: var(--alt);
+    color: var(--text);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.work-card-skills li:hover {
+    background-color: var(--text);
+    color: var(--bg);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .work-card {
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .work-card-header-text {
+        width: 100%;
+    }
+
+    .work-card-header {
+        flex-direction: column;
+    }
+
+    .work-card-image {
+        height: 200px;
+        width: 100%;
+    }
+
+    .work-card-company {
+        font-size: 1rem;
+    }
+
+    .work-card-position {
+        font-size: 0.9rem;
+    }
+
+    .work-card-dates {
+        font-size: 0.8rem;
+    }
+}

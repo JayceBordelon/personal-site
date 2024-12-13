@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface RandomizedTitleProps {
     children: React.ReactNode;
@@ -8,6 +8,8 @@ export default function RandomizedTitle({ children }: RandomizedTitleProps) {
     const [genTitle, setGenTitle] = useState<string>('');
     const [seed, setSeed] = useState<number>(0);
     const [finished, setFinished] = useState<boolean>(false);
+    const [inViewport, setInViewport] = useState<boolean>(false);
+    const titleRef = useRef<HTMLDivElement>(null);
 
     const title = typeof children === 'string' ? children : '';
 
@@ -20,22 +22,54 @@ export default function RandomizedTitle({ children }: RandomizedTitleProps) {
     };
 
     useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setInViewport(true);
+                } else {
+                    setInViewport(false);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (titleRef.current) {
+            observer.observe(titleRef.current);
+        }
+
+        return () => {
+            if (titleRef.current) {
+                observer.unobserve(titleRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (inViewport) {
+            setGenTitle('');
+            setSeed(0);
+            setFinished(false);
+        }
+    }, [inViewport]);
+
+    useEffect(() => {
+        if (!inViewport || finished) return;
+
         const interval = setInterval(() => {
-            if (seed >= title.length) {
+            setGenTitle((prev) => prev + title[seed]);
+            setSeed((prevSeed) => prevSeed + 1);
+
+            if (seed >= title.length - 1) {
                 clearInterval(interval);
                 setFinished(true);
-            } else {
-                const nextChar = title[seed];
-                setGenTitle((prev) => prev + nextChar);
-                setSeed((prevSeed) => prevSeed + 1);
             }
         }, 25);
 
         return () => clearInterval(interval);
-    }, [seed, title]);
+    }, [inViewport, seed, title, finished]);
 
     return (
-        <>
+        <div ref={titleRef}>
             {!finished ? (
                 <>
                     {genTitle} {generateSpaces(title.length - seed - 1)}|
@@ -43,6 +77,6 @@ export default function RandomizedTitle({ children }: RandomizedTitleProps) {
             ) : (
                 children
             )}
-        </>
+        </div>
     );
 }

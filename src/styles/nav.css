@@ -1,7 +1,7 @@
 
 :root{
     --nav-padding: 2rem;
-    --nav-height: 4rem;
+    --nav-height: 3.5rem;
     --nav-link-size: 1.5em;
     --nav-animation-duration: 1s;
 }
@@ -83,9 +83,6 @@ nav {
     }
 }
 
-.coffee-active{
-    color: var(--bg);
-}
 
 @keyframes appear{
     0%{

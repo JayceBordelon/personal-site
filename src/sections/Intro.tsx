@@ -10,10 +10,9 @@ export default function () {
                 </div>
             </div>
             <header>
-                <h2>
+                <h2 className="intro-header">
                     <RandomizedTitle>Learning to Build Valuable Software</RandomizedTitle>
                 </h2>
-
             </header>
         </section>
     )
