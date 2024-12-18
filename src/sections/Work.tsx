@@ -1,5 +1,6 @@
+import FloatingInView from '../components/FloatingInView'
 import RandomizedTitle from '../components/RandomizedTitle'
-import WorkCard from '../components/workCard'
+import WorkCard from '../components/WorkCard'
 import { myWorkExperiences } from '../constants/workConstants'
 
 export default function Work() {
@@ -10,7 +11,9 @@ export default function Work() {
       </header>
       <div id="work-cards-container">
         {myWorkExperiences.map((experience, index) => (
-          <WorkCard key={index} experience={experience} />
+          <FloatingInView key={index} className="work-card-wrapper" threshold={0.2}>
+            <WorkCard experience={experience} />
+          </FloatingInView>
         ))}
       </div>
     </section>

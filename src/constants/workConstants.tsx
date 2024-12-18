@@ -1,5 +1,22 @@
+import { DiMongodb } from "react-icons/di";
 import { workInfo } from "../types/workTypes"
 export const myWorkExperiences: workInfo[] = [
+    {
+        company: "Mastercard",
+        companyImageSrc: "mastercard.jpg",
+        startDate: "Starting August 2025",
+        position: "Incoming Software Engineer",
+        description: [
+            "I will be working in Payment Enablement Services which support a variety of services ranging from Apple Pay to Pin Validation."
+        ],
+        skills: [
+            "Pivotal Cloud Foundry",
+            "Reactive Java",
+            "Jenkins",
+            "Java",
+            "Spring Boot"
+        ]
+    },
     {
         company: "Mastercard",
         companyImageSrc: "mastercard.jpg",
@@ -38,6 +55,32 @@ export const myWorkExperiences: workInfo[] = [
             "LDAP",
             "React",
             "Docker"
+        ]
+    },
+    {
+        company: "WashU - Mckelvey School of Engineering",
+        companyImageSrc: "mckelvey.png",
+        startDate: "July 2022",
+        position: "Computer Science Teacher's Assistant",
+        description: [
+            "Hosted office hours to assist with rapid prototype development in various frameworks/languages",
+            "Wrote necessary documentation of modern topics and frameworks for student's view",
+            "Helped clarify common frameowork misconceptions through detailed, personalized instruction and grading comments"
+        ],
+        skills: [
+            "JavaScript",
+            "HTML/CSS",
+            "AWS EC2",
+            "Linux (RHEL)",
+            "Apache Server",
+            "PHP",
+            "SQL",
+            "SpringBoot",
+            "Node.js",
+            "Socket.io / Websockets",
+            "Next.js",
+            "React.js",
+            "MongoDb"
         ]
     },
     {

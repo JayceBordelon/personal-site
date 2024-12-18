@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { TfiWrite } from "react-icons/tfi"; //Blog
 import "../styles/nav.css"
 import { useEffect, useState } from "react";
-import { getContactIcon, getEducationIcon, getIntroIcon, getProjectIcon, getSkillIcon, getWorkIcon } from "../constants/sectionIcons";
+import { getContactIcon, getIntroIcon, getProjectIcon, getSkillIcon, getWorkIcon } from "../constants/sectionIcons";
 import { openLinkInNewTab } from "../functions/helpers";
 
 
@@ -39,7 +39,6 @@ export default function NavBar() {
                     : <AiOutlineClose className={getCoffeeClass()} size={navIconSize} onClick={() => setExpand(!expand)} />}
                 <div className={expand ? "nav-links-show" : "nav-links-hide"}>
                     <a onClick={() => setExpand(!expand)} className="nav-link" href="#intro">{getIntroIcon(expandedIconSize)}&nbsp;Intro</a>
-                    <a onClick={() => setExpand(!expand)} className="nav-link" href="#education">{getEducationIcon(expandedIconSize)}&nbsp;Education</a>
                     <a onClick={() => setExpand(!expand)} className="nav-link" href="#work">{getWorkIcon(expandedIconSize)}&nbsp;Work</a>
                     <a onClick={() => setExpand(!expand)} className="nav-link" href="#skills">{getSkillIcon(expandedIconSize)}&nbsp;Skills</a>
                     <a onClick={() => setExpand(!expand)} className="nav-link" href="#projects">{getProjectIcon(expandedIconSize)}&nbsp;Projects</a>

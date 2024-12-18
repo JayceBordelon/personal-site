@@ -1,3 +1,10 @@
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+}
+
 #intro .profile-pic {
     width: 15rem;
     background: linear-gradient(-45deg, var(--alt), var(--text), var(--alt));
@@ -9,7 +16,7 @@
 .profile-pic:hover {
     box-shadow: 0 4px 6px var(--alt), 0 1px 3px var(--alt);
     cursor: pointer;
-    transform: scale(1.05); 
+    transform: scale(1.05);  
 }
 
 .profile-pic img {
@@ -18,4 +25,10 @@
 
 .intro-header {
     font-size: calc(var(--section-title-size) * 1.5);
+}
+
+@media (max-width: 768px) {
+    .intro-header {
+        font-size: calc(var(--section-title-size) * 1.1);
+    }
 }
