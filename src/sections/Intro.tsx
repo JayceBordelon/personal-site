@@ -6,7 +6,7 @@ export default function Intro() {
   return (
     <motion.section
       id="intro"
-      initial={{ height: "85vh" }} 
+      initial={{ height: "85vh", justifyContent: "space-around" }} 
       animate={{ height: "fit-content" }}
       transition={{
         delay: 1.5,
