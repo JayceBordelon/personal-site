@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import RandomizedTitle from "../components/RandomizedTitle";
 import { openLinkInNewTab } from "../functions/helpers";
+import TypeWriter from "../components/TypeWriter";
 
 export default function Intro() {
   return (
@@ -28,7 +28,7 @@ export default function Intro() {
       </div>
       <header>
         <h1 className="intro-header">
-          <RandomizedTitle>Learning to Build Valuable Software</RandomizedTitle>
+          <TypeWriter>Learning to Build Valuable Software</TypeWriter>
         </h1>
       </header>
     </motion.section>

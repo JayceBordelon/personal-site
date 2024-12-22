@@ -1,5 +1,5 @@
 import FloatingInView from '../components/FloatingInView'
-import RandomizedTitle from '../components/RandomizedTitle'
+import TypeWriter from '../components/TypeWriter'
 import WorkCard from '../components/WorkCard'
 import { myWorkExperiences } from '../constants/workConstants'
 
@@ -7,7 +7,7 @@ export default function Work() {
   return (
     <section id="work">
       <header>
-      <h2><RandomizedTitle>Software Expereince</RandomizedTitle></h2>
+      <h2><TypeWriter>Software Expereince</TypeWriter></h2>
       </header>
       <div id="work-cards-container">
         {myWorkExperiences.map((experience, index) => (

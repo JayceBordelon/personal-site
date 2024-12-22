@@ -1,4 +1,4 @@
-import RandomizedTitle from '../components/RandomizedTitle'
+import RandomizedTitle from '../components/TypeWriter'
 
 export default function Projects() {
   return (

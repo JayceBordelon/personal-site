@@ -1,11 +1,10 @@
-import React from 'react'
-import RandomizedTitle from '../components/RandomizedTitle'
+import TypeWriter from '../components/TypeWriter'
 
 export default function Contact() {
   return (
     <section id="contact">
       <header>
-          <h2><RandomizedTitle>Get In Touch</RandomizedTitle></h2>
+          <h2><TypeWriter>Get In Touch</TypeWriter></h2>
       </header>
     </section>
   )

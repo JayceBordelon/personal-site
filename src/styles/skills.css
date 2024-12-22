@@ -13,8 +13,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 180px;
-    height: 240px;
+    width: 150px;
+    height: 150px;
     padding: 1.5rem;
     border: 1px solid var(--alt);
     border-radius: 1rem;
@@ -25,10 +25,11 @@
   
   .skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 0 80px var(--alt); 
     background-color: var(--text);
     color: var(--bg);
     cursor: alias;
+
   }
   
   .skill-card header h3 {

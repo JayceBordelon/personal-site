@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 
-interface RandomizedTitleProps {
+interface TypewriterProps {
     children: React.ReactNode;
 }
 
-export default function RandomizedTitle({ children }: RandomizedTitleProps) {
+export default function TypeWriter({ children }: TypewriterProps) {
     const [genTitle, setGenTitle] = useState<string>('');
     const [seed, setSeed] = useState<number>(0);
     const [finished, setFinished] = useState<boolean>(false);
