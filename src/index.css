@@ -4,7 +4,7 @@
 @import url("./styles/work.css");
 @import url("./styles/skills.css");
 @import url("./styles/project.css");
-
+@import url("./styles/contact.css");
 
 :root {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -19,7 +19,7 @@
   --text: rgb(229, 229, 229);
   --box: 0 4px 6px rgba(0, 0, 0, 0.1), 
                 0 1px 3px rgba(0, 0, 0, 0.08);
-  --alt: #4b6b8b;
+  --alt: #5953a6;
   --section-title-size: 2rem;
 }
 
@@ -65,12 +65,12 @@ section header h2 {
   width: fit-content;
   display: flex;
   justify-content: space-between;
+  background-color: transparent;
+  border-radius: 5px;
   align-items: center;
   padding: 0.5rem;
-  background-color: var(--text);
-  color: var(--bg);
-  border-radius: 15px;
-  box-shadow: 10px 0 80px var(--alt); 
+  color: var(--text);
+  box-shadow: 10px 5px 80px var(--alt); 
 }
 
 

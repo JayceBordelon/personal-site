@@ -5,7 +5,6 @@
     gap: 2rem;
     padding: 2rem;
     background-color: var(--bg);
-    border-radius: 1rem;
   }
   
   .skill-card {
@@ -17,7 +16,6 @@
     height: 150px;
     padding: 1.5rem;
     border: 1px solid var(--alt);
-    border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -53,27 +51,4 @@
     margin-top: auto;
   }
   
-  .proficiency-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top: 1rem;
-    position: relative;
-  }
-  
-  .proficiency-bar {
-    height: 1.25rem;
-    background-color: var(--alt);
-    border-radius: 0.5rem;
-    flex: 1;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .proficiency-text {
-    margin-left: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text);
-    white-space: nowrap;
-  }
   

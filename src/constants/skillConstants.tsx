@@ -26,13 +26,12 @@ export const mySkills: skillInfo[] = [
   { title: "MongoDB", proficiency: 90, icon: <SiMongodb size={SKILL_ICON_SIZE} /> },
   { title: "Django", proficiency: 73, icon: <TbBrandDjango size={SKILL_ICON_SIZE} /> },
   { title: "Git", proficiency: 88, icon: <FaGit size={SKILL_ICON_SIZE} /> },
-  { title: "API", proficiency: 91, icon: <TbApi size={SKILL_ICON_SIZE} /> },
   { title: "OCR", proficiency: 76, icon: <GiArtificialHive size={SKILL_ICON_SIZE} /> },
   { title: "Linux", proficiency: 73, icon: <FaLinux size={SKILL_ICON_SIZE} /> },
   { title: "PostgreSQL", proficiency: 80, icon: <SiPostgresql size={SKILL_ICON_SIZE} /> },
   { title: "AWS Lambda", proficiency: 60, icon: <SiAwslambda size={SKILL_ICON_SIZE} /> },
   { title: "SQL", proficiency: 82, icon: <SiMysql size={SKILL_ICON_SIZE} /> },
-  { title: "Spring Boot", proficiency: 86, icon: <BiLogoSpringBoot size={SKILL_ICON_SIZE} /> },
+  { title: "Spring Boot", proficiency: 90, icon: <BiLogoSpringBoot size={SKILL_ICON_SIZE} /> },
   { title: "Jenkins", proficiency: 78, icon: <FaJenkins size={SKILL_ICON_SIZE} /> },
 ];
 
