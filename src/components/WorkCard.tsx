@@ -48,7 +48,7 @@ export default function WorkCard({ experience }: WorkCardProps) {
                             ))}
                         {experience.description.length > 1 && (
                             <button className="see-more-btn" onClick={toggleExpanded}>
-                                {expanded ? 'See Less' : 'See More'}
+                                {expanded ? 'See Less' : 'See What I Did!'}
                             </button>
                         )}
                     </>
