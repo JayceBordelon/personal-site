@@ -7,6 +7,13 @@ export default function Intro() {
     <motion.section
       id="intro"
       className="overflow-hidden"
+      initial={{ height: "100vh", justifyContent: "center" }} 
+      animate={{ height: "fit-content" }}
+      transition={{
+        delay: 1,
+        duration: 0.8, 
+        ease: "easeInOut",
+      }}
     >
       <div className="section-content">
         <div className="profile-pic">

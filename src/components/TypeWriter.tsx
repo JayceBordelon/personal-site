@@ -64,7 +64,7 @@ export default function TypeWriter({ children }: TypewriterProps) {
                 clearInterval(interval);
                 setFinished(true);
             }
-        }, 25);
+        }, 20);
 
         return () => clearInterval(interval);
     }, [inViewport, seed, title, finished]);

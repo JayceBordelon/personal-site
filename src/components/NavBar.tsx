@@ -10,7 +10,7 @@ import { openLinkInNewTab } from "../functions/helpers";
 
 
 export default function NavBar() {
-    const navIconSize = 40;
+    const navIconSize = 35;
     const expandedIconSize = '35';
     const [hasAnimated, setHasAnimated] = useState(false);
     const [expand, setExpand] = useState(false);

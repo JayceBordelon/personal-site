@@ -83,7 +83,6 @@
     font-weight: 700;
     color: var(--alt);
     text-align: center;
-    margin: 2rem 0;
   }
   
   /* Success and Error Messages */
@@ -94,7 +93,6 @@
     font-weight: 600;
     border-radius: 0.5rem;
     text-align: center;
-    margin: 1rem 0;
     max-width: 100%;
     word-wrap: break-word;
   }

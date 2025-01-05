@@ -1,9 +1,9 @@
 
 :root{
     --nav-padding: 2rem;
-    --nav-height: 3.5rem;
-    --nav-link-size: 1.5em;
-    --nav-animation-duration: 1s;
+    --nav-height: 3rem;
+    --nav-link-size: 1em;
+    --nav-animation-duration: 0.75s;
 }
 #nav-container{
     width: 100%;
@@ -71,7 +71,7 @@ nav {
     margin: 0;
     font-size: var(--nav-link-size);
     background-color: var(--alt);
-    animation: expandHeight var(--nav-animation-duration) ease-in-out forwards;
+    animation: expandHeight 0.45s ease-in-out forwards;
 }
 
 @keyframes expandHeight{
@@ -88,7 +88,7 @@ nav {
     0%{
         opacity: 0;
     }
-    40%{
+    20%{
         opacity: 0;
     }
     100%{
