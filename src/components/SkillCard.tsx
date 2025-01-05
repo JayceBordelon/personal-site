@@ -9,7 +9,7 @@ interface skillCardProps {
 
 export default function SkillCard({ skillInfo }: skillCardProps) {
   return (
-    <FloatingInView threshold={0.5}>
+    <FloatingInView threshold={0.6}>
       <div className="skill-card" id={skillInfo.title} onClick={() => openLinkInNewTab(`https://www.google.com/search?q=What+is+${skillInfo.title}?`)}>
         <header>
           <h3>{skillInfo.title}</h3>

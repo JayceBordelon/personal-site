@@ -1,3 +1,134 @@
-.contact #form {
-    
-}
+/* Contact Section */
+#contact {
+    padding: 3rem;
+    background-color: var(--bg);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  
+  /* Contact Form */
+  #form {
+    width: 100%;
+    /* max-width: 600px; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .field {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .field input,
+  .field textarea {
+    flex: 1 1 calc(50% - 1rem);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--text-secondary, rgba(255, 255, 255, 0.1));
+    border: 1px solid var(--alt);
+    border-radius: 0.5rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .field textarea {
+    flex: 1 1 100%;
+    resize: none;
+    height: 120px;
+  }
+  
+  .field input:focus,
+  .field textarea:focus {
+    box-shadow: 0 0 8px var(--alt);
+    transform: translateY(-2px);
+    outline: none;
+  }
+  
+  /* Button */
+  #form button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bg);
+    background-color: var(--alt);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px var(--alt);
+  }
+  
+  /* Loading Text */
+  #form h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--alt);
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  /* Success and Error Messages */
+  .success-text,
+  .error-text {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .success-text {
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+  }
+  
+  .error-text {
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+  }
+  
+  /* FloatingInView Wrapper */
+  .floating-container {
+    animation: floatIn 1s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes floatIn {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #contact {
+      padding: 2rem;
+    }
+  
+    .field input,
+    .field textarea {
+      flex: 1 1 100%;
+    }
+  
+    #form button {
+      align-self: center;
+      width: 100%;
+    }
+  }
+  
