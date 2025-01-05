@@ -6,12 +6,12 @@ export default function Intro() {
   return (
     <motion.section
       id="intro"
-      initial={{ height: "85vh", justifyContent: "center" }} 
+      initial={{ height: "50vh", justifyContent: "center" }} 
       animate={{ height: "fit-content" }}
       transition={{
         delay: 1,
         duration: 0.8, 
-        ease: "easeOut",
+        ease: "easeInOut",
       }}
       className="overflow-hidden"
     >
