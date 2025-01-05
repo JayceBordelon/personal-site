@@ -8,7 +8,7 @@ export default function Intro() {
       id="intro"
       className="overflow-hidden"
       initial={{ height: "100vh", justifyContent: "center" }} 
-      animate={{ height: "fit-content" }}
+      animate={{ height: "45vh" }}
       transition={{
         delay: 1,
         duration: 0.8, 
