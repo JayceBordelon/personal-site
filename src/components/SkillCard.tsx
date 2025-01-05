@@ -1,4 +1,3 @@
-import React from 'react';
 import { skillInfo } from '../types/skillInfo';
 import FloatingInView from './FloatingInView';
 import { getCssRootVar, openLinkInNewTab } from '../functions/helpers';

@@ -22,7 +22,7 @@ export default function NavBar() {
     }, []);
 
     const getCoffeeClass = () => {
-        let current = expand ? "coffee-active" : "coffee";
+        const current = expand ? "coffee-active" : "coffee";
         if (!hasAnimated) {
             console.log(current + " animate-nav-icon");
             return current + " animate-nav-icon"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { workInfo } from '../types/workTypes';
 import { openLinkInNewTab } from '../functions/helpers';
 import { IoIosGitBranch } from "react-icons/io";

@@ -1,12 +1,10 @@
 import { skillInfo } from "../types/skillInfo";
 import { DiCss3, DiNodejs, DiPython, DiReact, DiHtml5, DiJava, DiJavascript1  } from 'react-icons/di' 
-import {TbBrandCpp, TbApi, TbBrandDjango} from 'react-icons/tb'
+import {TbBrandCpp, TbBrandDjango} from 'react-icons/tb'
 import {SiAwslambda, SiMongodb, SiPostgresql, SiSvelte, SiMysql, SiRubyonrails, SiPhp} from 'react-icons/si'
 import {FaLinux, FaGit, FaJenkins} from 'react-icons/fa'
 import {GiArtificialHive} from 'react-icons/gi'
 import {BiLogoFlask, BiLogoSpringBoot} from 'react-icons/bi'
-
-import { getCssRootVar } from "../functions/helpers";
 
 export const SKILL_ICON_SIZE = 80 as const;
 

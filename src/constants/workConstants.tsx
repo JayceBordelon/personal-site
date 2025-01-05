@@ -1,4 +1,3 @@
-import { DiMongodb } from "react-icons/di";
 import { workInfo } from "../types/workTypes"
 export const myWorkExperiences: workInfo[] = [
     {
