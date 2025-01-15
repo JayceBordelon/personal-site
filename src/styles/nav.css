@@ -1,11 +1,10 @@
-
-:root{
+:root {
     --nav-padding: 2rem;
     --nav-height: 3rem;
     --nav-link-size: 1em;
     --nav-animation-duration: 0.75s;
 }
-#nav-container{
+#nav-container {
     width: 100%;
     height: var(--nav-height);
     position: fixed;
@@ -23,19 +22,17 @@
     0% {
         width: 0%;
     }
-    100%{
+    100% {
         width: 100%;
     }
 }
 
-.animate-nav-icon{
+.animate-nav-icon {
     animation: nav-icon-drop ease-in-out 1.5s forwards;
 }
 
-
-
 @keyframes nav-icon-drop {
-    0%{
+    0% {
         transform: translateY(-100px);
     }
     50% {
@@ -74,7 +71,7 @@ nav {
     animation: expandHeight 0.45s ease-in-out forwards;
 }
 
-@keyframes expandHeight{
+@keyframes expandHeight {
     0% {
         height: 0;
     }
@@ -83,20 +80,19 @@ nav {
     }
 }
 
-
-@keyframes appear{
-    0%{
+@keyframes appear {
+    0% {
         opacity: 0;
     }
-    20%{
+    20% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-.nav-link{
+.nav-link {
     width: 100%;
     height: calc(100vh - var(--nav-height));
     font-size: 1.25em;
@@ -106,15 +102,13 @@ nav {
     animation: appear var(--nav-animation-duration) ease-in-out forwards;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     box-shadow: var(--box);
     background-color: var(--bg);
-    color: var(--text)
+    color: var(--text);
 }
 
-
-
-.nav-links-hide{
+.nav-links-hide {
     display: none;
 }
 
@@ -124,8 +118,10 @@ nav {
     text-decoration: none;
 }
 
-
-.download-resume:hover, .coffee:hover, .coffee-active:hover, .to-blog:hover{
+.download-resume:hover,
+.coffee:hover,
+.coffee-active:hover,
+.to-blog:hover {
     cursor: pointer;
     color: var(--bg);
 }
