@@ -1,15 +1,15 @@
 @keyframes fadeIn {
-    0% {
-        display: none;
-        opacity: 0;
-    }
+  0% {
+    display: none;
+    opacity: 0;
+  }
 
-    50%{
-        display: relative;
-        opacity: 0;
-    }
+  50% {
+    display: relative;
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }

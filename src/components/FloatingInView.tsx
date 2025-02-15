@@ -4,14 +4,14 @@ import { useInView } from 'react-intersection-observer';
 
 interface FloatingInViewProps {
   children: ReactNode;
-  threshold?: number; 
+  threshold?: number;
   className?: string;
 }
 
-const FloatingInView: React.FC<FloatingInViewProps> = ({ 
-  children, 
-  threshold = 0.1, 
-  className 
+const FloatingInView: React.FC<FloatingInViewProps> = ({
+  children,
+  threshold = 0.1,
+  className,
 }) => {
   const { ref, inView } = useInView({ threshold });
 

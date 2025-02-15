@@ -1,77 +1,78 @@
-
-
 .project-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    background-color: var(--bg, #1a1a1a);
-  }
-  
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 275px;
-    min-height: 325px;
-    padding: 1.5rem;
-    border: 1px solid var(--alt, #ccc);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    background-color: var(--text);
-    color: var(--alt) !important;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  }
-  
-  
-  .project-card header h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--alt, #fff);
-    text-transform: uppercase;
-  }
-  
-  .project-card p {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: justify;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--bg, #1a1a1a);
+}
 
-  .open-project-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 16px;
-    border: 2px solid var(--alt, #ccc);
-    color: var(--alt, #fff);
-    background-color: var(--bg);
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-  }
-  
-  .open-project-button:hover {
-    background-color: var(--alt);
-    color: var(--bg, #1a1a1a);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transform: translateY(-5px);
-  }
-  
-  .open-project-button:focus {
-    outline: none;
-    box-shadow: 0 0 8px var(--alt);
-  }
-  
-  .open-project-button:active {
-    transform: translateY(2px);
-  }
-  
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 275px;
+  min-height: 325px;
+  padding: 1.5rem;
+  border: 1px solid var(--alt, #ccc);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background-color: var(--text);
+  color: var(--alt) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project-card header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--alt, #fff);
+  text-transform: uppercase;
+}
+
+.project-card p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.open-project-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border: 2px solid var(--alt, #ccc);
+  color: var(--alt, #fff);
+  background-color: var(--bg);
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.open-project-button:hover {
+  background-color: var(--alt);
+  color: var(--bg, #1a1a1a);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.open-project-button:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--alt);
+}
+
+.open-project-button:active {
+  transform: translateY(2px);
+}

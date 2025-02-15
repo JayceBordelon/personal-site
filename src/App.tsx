@@ -7,19 +7,19 @@ import Skills from './sections/Skills';
 import Work from './sections/Work';
 
 function App() {
-    return (
-        <>
-            <NavBar />
-            <main>
-                <Intro />
-                <Work />
-                <Skills />
-                <Projects />
-                <Contact />
-                <Footer />
-            </main>
-        </>
-    );
+  return (
+    <>
+      <NavBar />
+      <main>
+        <Intro />
+        <Work />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </main>
+    </>
+  );
 }
 
 export default App;
