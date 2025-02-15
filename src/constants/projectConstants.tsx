@@ -9,7 +9,7 @@ export const myProjects: project[] = [
   {
     title: 'Blog',
     desc: 'I built a blog site to detail my SWE expereince.',
-    link: 'https://jayceblog.netlify.app/',
+    link: 'https://jayce-blog.vercel.app/',
     icon: <TfiWrite size={ICON_SIZE} />,
   },
   {
