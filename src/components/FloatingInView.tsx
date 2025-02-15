@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -14,13 +14,18 @@ const FloatingInView: React.FC<FloatingInViewProps> = ({
   className,
 }) => {
   const { ref, inView } = useInView({ threshold });
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  if (inView && !hasAnimated) {
+    setHasAnimated(true);
+  }
 
   return (
     <motion.div
       ref={ref}
       className={className}
       initial={{ opacity: 0, y: 100 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       {children}
